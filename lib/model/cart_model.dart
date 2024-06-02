@@ -22,7 +22,8 @@ class CartModel extends ChangeNotifier {
     });
     return total;
   }
-
+  
+  //create
   void addItem(Map<String, dynamic> product, int unit) {
     final productId = product['id'];
     _items.add(product);
@@ -30,6 +31,7 @@ class CartModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  //remove
   void removeItem(int index) {
     final removedProduct = _items.removeAt(index); // Remove the product from the list
     final removedProductId = removedProduct['id']; // Get the ID of the removed product
